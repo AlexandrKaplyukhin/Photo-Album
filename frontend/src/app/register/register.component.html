@@ -1,0 +1,56 @@
+<div class="back-container">
+<div class="container sign-in" *ngIf="valueForm; else signUpForm">
+    <form class="sign-form">
+        <p>Authorization</p>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Login</label>
+          <input type="text" class="form-control form-control-sm">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control form-control-sm" id="exampleInputPassword1">
+        </div>
+        <div class="container">
+        <div class="row align-items-center">
+          <div class="col">
+        <button type="submit" class="btn btn-primary btn-sm px-3">Sign In</button>
+      </div>
+      <div class="col-7">
+        <button (click)="changeForm()" type="button" style="float: right;" class="btn btn-secondary btn-sm">Don't have an accaunt? Sign Up</button>
+      </div>
+      </div>
+    </div>
+      </form>
+</div>
+
+</div>
+<ng-template  #signUpForm>
+    <div class="container sign-up">
+    <form class="sign-form">
+        <p>Registration</p>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="text" class="form-control form-control-sm">
+          </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Login</label>
+          <input type="text" class="form-control form-control-sm">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control form-control-sm" id="exampleInputPassword1">
+        </div>
+        <div class="container">
+        <div class="row align-items-center">
+          <div class="col">
+        <button type="submit" class="btn btn-primary btn-sm px-3">Submit</button>
+      </div>
+      <div class="col-6">
+        <button (click)="changeForm()" type="button" style="float: right;" class="btn btn-secondary btn-sm">Have an accaunt? Sign In    </button>
+      </div>
+    </div>
+  </div>
+      </form>
+    </div>
+</ng-template>
+
